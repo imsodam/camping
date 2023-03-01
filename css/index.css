@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/* 컨텐츠부분 공통적용 */
+#section {
+  /* max-width: 1920px; */
+  margin: 0 auto;
+  background: #111;
+}
+
+article {
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.cont1 {
+  padding: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 컨텐츠구역 1 */
+.cont1 {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cont1 .video {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+}
+
+/* 컨텐츠구역 2 */
+.cont2,
+.cont3 {
+  padding: 200px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  position: relative;
+  display: flex;
+  /* max-width: 700px; */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-wrapper {
+  display: flex;
+  margin-bottom: 48px;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* display: block; */
+}
+
+.cont2 span {
+  color: #fff;
+  font-size: 84px;
+  display: block;
+}
+
+.intro-image-wrapper {
+  position: relative;
+  perspective: 1200px;
+  transform: perspective(1200px);
+  /* filter: blur(0px); */
+}
+
+.intro-image-wrapper img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1em;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.intro-image-wrapper:hover img {
+  transform: translate3d(0px, 0px, 0px) scale3d(2, 2, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(-3deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+/* 컨텐츠구역 3 */
+.cont3 .container {
+  position: relative;
+  width: 1400px;
+  height: 900px;
+  background: #222;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.cont3 .container .clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.2; */
+  filter: blur(5px);
+  transition: 0.5s;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.cont3 .container .clip.clip1 {
+  background: url(../img/1.jpeg);
+  background-size: cover;
+  clip-path: polygon(0 0, 55% 0, 20% 100%, 0% 100%);
+}
+
+.cont3 .container .clip.clip2 {
+  background: url(../img/2.jpeg);
+  background-size: cover;
+  clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
+}
+
+.cont3 .container .clip.clip3 {
+  background: url(../img/3.jpeg);
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
+}
+
+.cont3 .container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  /* opacity: 1; */
+  filter: blur(0px);
+}
+
+.cont3 .container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
