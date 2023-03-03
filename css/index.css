@@ -14,8 +14,8 @@ article {
 
 /* 컨텐츠구역 1 */
 .cont1 {
-  width: 95%;
-  padding: 0px;
+  width: 94%;
+  padding-top: 110px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
