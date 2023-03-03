@@ -138,7 +138,8 @@
 /* 사이드 메뉴 열기 버튼 */
 .hamburger-button {
   display: inline-block;
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   transition: 0.3s ease-in-out;
   width: 35px;
   height: 30px;
