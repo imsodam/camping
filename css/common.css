@@ -77,6 +77,10 @@
   display: block;
 }
 
+#header.on .top_menu .row {
+  display: block;
+}
+
 #header .top_menu a {
   padding: 7px 20px;
   display: inline-block;
