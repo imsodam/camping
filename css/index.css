@@ -14,7 +14,7 @@ article {
 
 /* 컨텐츠구역 1 */
 .cont1 {
-  width: 100%;
+  width: 95%;
   padding: 0px;
   position: relative;
   left: 50%;
@@ -25,11 +25,24 @@ article {
 .cont1 .video {
   margin: 0 auto;
   overflow: hidden;
-  border-bottom-left-radius: 80px;
+  border-radius: 80px;
+  /* border: 1px solid #fff; */
+  animation: fadein 3s;
 }
 
 video {
   width: 100%;
+}
+
+@keyframes fadein {
+  from {
+    /* opacity: 0; */
+    transform: scale(0);
+  }
+  to {
+    /* opacity: 1; */
+    transform: scale(1.2);
+  }
 }
 
 /* 컨텐츠구역 2 */
@@ -91,6 +104,11 @@ video {
   transform-style: preserve-3d;
 }
 
+.intro-image-wrapper:hover img.img2 {
+  transform: translate3d(0px, 0px, 0px) scale3d(2, 2, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(3deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
 /* 컨텐츠구역 3 */
 .cont3 .container {
   position: relative;
