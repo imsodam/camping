@@ -30,7 +30,7 @@ $(window).on("load", function () {
     }
   });
 
-  //헤더 scroll
+  // 헤더 scroll
   $(window).scroll(function () {
     var num = $(this).scrollTop();
     if (num > 10) {
@@ -38,6 +38,15 @@ $(window).on("load", function () {
     } else {
       $("#header").removeClass("on");
     }
+  });
+
+  // 햄버거버튼에 호버했을때 헤더 열림
+  $(".hamburger-button").mouseenter(function () {
+    $(this).siblings('#header').addClass('on')
+  });
+
+  $(".hamburger-button").mouseleave(function () {
+    $(this).siblings('#header').removeClass('on')
   });
 
   // 햄버거버튼 열기 닫기
