@@ -56,3 +56,18 @@ $(window).on("load", function () {
     $(".m_menu").toggleClass("visible");
   });
 });
+
+
+$(window).scroll( function(){
+  $('article').each( function(i){
+      
+      var ele = $(this).offset().top + $(this).outerHeight()/1.5;
+      var wdw = $(window).scrollTop() + $(window).height();
+      
+      if( wdw > ele ){
+        $(this).addClass('animate');
+      }else {
+        $(this).removeClass('animate');
+      }
+  }); 
+});
